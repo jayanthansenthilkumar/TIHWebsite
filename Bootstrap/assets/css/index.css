@@ -1,0 +1,175 @@
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-controls .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pagination-controls .dot.active {
+  background-color: rgba(9, 60, 121, 1);
+}
+
+.team-filters {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.team-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 20px 10px 20px;
+  margin: 0;
+  margin-bottom: 0px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.team-filters li.active {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(11, 77, 78, 1) 53%,
+    rgba(9, 60, 121, 1) 95%
+  );
+  color: #fff;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-img img {
+  position: relative;
+  max-width: 80%;
+  /* Set image to 80% of its original size */
+  height: auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  transition: transform 0.5s ease-in-out;
+  margin-left: 30px;
+  /* Move the image slightly to the right */
+}
+
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+.about-img img {
+  position: relative;
+  max-width: 80%;
+  /* Set image to 80% of its original size */
+  height: auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  transition: transform 0.5s ease-in-out;
+  margin-left: 30px;
+  /* Move the image slightly to the right */
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+#skills {
+  position: relative;
+  z-index: 1;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Bubble animation */
+.bubble {
+  position: absolute;
+  bottom: -150px;
+  /* Start below the section */
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 123, 255, 0.6);
+  /* Change to your preferred color */
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: rise 10s infinite;
+}
+
+/* Randomize the bubbles' sizes and starting positions */
+.bubble:nth-child(1) {
+  left: 20%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  width: 25px;
+  height: 25px;
+}
+
+.bubble:nth-child(2) {
+  left: 40%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+  width: 35px;
+  height: 35px;
+}
+
+.bubble:nth-child(3) {
+  left: 60%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+  width: 20px;
+  height: 20px;
+}
+
+.bubble:nth-child(4) {
+  left: 80%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+  width: 30px;
+  height: 30px;
+}
+
+.bubble:nth-child(5) {
+  left: 30%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+  width: 40px;
+  height: 40px;
+}
+
+/* Keyframes for bubble animation */
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-100vh);
+    /* Move the bubble up */
+    opacity: 0;
+    /* Fade out */
+  }
+}
